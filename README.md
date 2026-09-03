@@ -1,64 +1,87 @@
 # Venkata Gopi Kondeti
 
-**AI/ML Engineer** — LLM applications, MLOps, and forecasting systems.
+### AI/ML Engineer — LLM Applications · MLOps · Forecasting
 
-I build the parts of machine learning that have to keep working after the demo: retrieval
-pipelines that can be measured, models that fail loudly instead of silently, and forecasts
-that are honest about what they can't predict.
+**5 years** building and shipping machine learning systems · **US — open to relocation** · **Open to new roles**
 
-Currently at **NVIDIA**, working on LLM applications with Azure OpenAI and LangChain.
-Previously **Fractal**, on demand forecasting and generative AI workflows on AWS.
-MS in Information Technology Management, Webster University.
+📧 **venkatagopikondeti307@gmail.com**
 
 ---
 
-## Projects
+## At a glance
 
-| Project | What it is | Result |
-|---|---|---|
-| **[rag-doc-assistant](https://github.com/venkatagopikondeti/rag-doc-assistant)** | RAG question answering over your own documents — chunking, embeddings, vector index, FastAPI service | 100% hit@3, MRR 1.00 on a labelled eval set |
-| **[mlops-churn-pipeline](https://github.com/venkatagopikondeti/mlops-churn-pipeline)** | Train → quality-gate → serve → monitor for drift, end to end | ROC AUC 0.743, PSI drift monitor catching shifts at 0.30 |
-| **[demand-forecasting](https://github.com/venkatagopikondeti/demand-forecasting)** | Daily demand forecasting with leakage-free features and rolling-origin backtesting | **MASE 0.60** vs 1.06 for the seasonal-naive baseline |
-
-Each repo runs its tests on Python 3.10/3.11/3.12 in CI, with the linter and the
-evaluation step gating every push. 58 tests, no network required.
-
-### Three ideas they share
-
-**Measure the thing that actually decides quality.** In the RAG project, retrieval is
-scored on its own — hit-rate@k and MRR — because answer quality is bounded by it. In the
-forecasting project, every model runs against a seasonal-naive baseline over identical
-folds, because a forecast without a baseline is a number without a meaning.
-
-**Fail loudly.** The churn pipeline's quality gate exits non-zero when test ROC AUC drops
-below its floor, so a regression stops the build instead of quietly shipping.
-
-**Make it testable without the vendor.** Embeddings, vector index and LLM all sit behind
-small interfaces with offline defaults, so the logic that matters is unit-tested in CI
-without a single external call — then swapped for the real models in production.
+| | |
+|---|---|
+| **Current** | AI/ML Engineer @ NVIDIA — LLM applications with Azure OpenAI and LangChain |
+| **Previously** | Machine Learning Engineer @ Fractal — demand forecasting and generative AI on AWS |
+| **Education** | MS, Information Technology Management — Webster University (CGPA 3.92) |
+| **Core** | Python · LLMs & RAG · MLflow · FastAPI · Azure ML · AWS SageMaker · Docker · Kubernetes |
+| **Looking for** | AI/ML Engineer, ML Platform, or MLOps roles |
 
 ---
 
-## Toolbox
+## What I've delivered
+
+- **35% faster** employee query resolution — LLM applications built with Azure OpenAI and LangChain
+- **25% fewer** irrelevant search results — retrieval-augmented generation using FAISS, Pinecone and Azure AI Search
+- **40% fewer** release incidents — model deployment on MLflow, Docker and Azure Kubernetes Service
+- **10M+ records daily** — PySpark data pipelines on Azure Databricks and Data Lake Storage Gen2
+- **40% faster** data processing — automated pipelines with AWS Glue, Lambda and Kinesis
+- **12% better** forecasting accuracy — feature engineering and hyperparameter tuning with XGBoost and Prophet
+
+---
+
+## Featured projects
+
+Three production-shaped repositories. Every number below is reproducible by running the code.
+
+### 🔍 [rag-doc-assistant](https://github.com/venkatagopikondeti/rag-doc-assistant)
+Retrieval-augmented question answering over your own documents — chunking, embeddings, vector index, and a FastAPI service.
+**Result: 100% hit@3, MRR 1.00** on a labelled evaluation set.
+`Python` `FastAPI` `LangChain` `FAISS` `Azure OpenAI` `Docker`
+
+### ⚙️ [mlops-churn-pipeline](https://github.com/venkatagopikondeti/mlops-churn-pipeline)
+End-to-end MLOps: train → quality gate → serve → monitor for drift. The build fails if model quality regresses.
+**Result: ROC AUC 0.743**, PSI drift monitor flagging population shifts before labels arrive.
+`scikit-learn` `MLflow` `FastAPI` `Docker` `GitHub Actions` `drift detection`
+
+### 📈 [demand-forecasting](https://github.com/venkatagopikondeti/demand-forecasting)
+Daily demand forecasting with leakage-free features and rolling-origin backtesting.
+**Result: MASE 0.60** — 40% below the seasonal-naive baseline it's measured against.
+`XGBoost` `Prophet` `pandas` `time series` `backtesting`
+
+> All three run their test suites on Python 3.10 / 3.11 / 3.12 in CI, with linting and evaluation gating every push. **58 tests, no network required.**
+
+---
+
+## Technical skills
 
 **Languages** Python · SQL · PySpark · R
 
-**ML** scikit-learn · PyTorch · TensorFlow · XGBoost · LightGBM · Prophet · Hugging Face Transformers
+**Machine learning** scikit-learn · PyTorch · TensorFlow · XGBoost · LightGBM · Prophet · Hugging Face Transformers
 
-**LLM & RAG** Azure OpenAI · LangChain · LangGraph · FAISS · Pinecone · ChromaDB · sentence-transformers · Amazon Bedrock
+**LLM & GenAI** Azure OpenAI · LangChain · LangGraph · RAG · Amazon Bedrock · FAISS · Pinecone · ChromaDB · sentence-transformers · prompt engineering · semantic search
 
-**MLOps** MLflow · Docker · Kubernetes / AKS · GitHub Actions · Azure DevOps · drift monitoring · model registry
+**MLOps** MLflow · Docker · Kubernetes / AKS · GitHub Actions · Azure DevOps · CI/CD · model registry · model monitoring · drift detection · retraining
 
-**Cloud** Azure (ML, Databricks, Functions, Data Lake Gen2, Cosmos DB) · AWS (SageMaker, Glue, Lambda, Kinesis, Step Functions, S3)
+**Azure** Azure ML · Azure AI Studio · Databricks · Functions · Event Hubs · Data Lake Storage Gen2 · Cosmos DB · AKS
 
-**Data** Spark · Databricks · Airflow · ETL/ELT pipelines · feature engineering · real-time inference
+**AWS** SageMaker (Endpoints, Feature Store, Model Monitor) · Bedrock · Glue · Lambda · Kinesis · Step Functions · S3 · API Gateway · IAM
+
+**Data engineering** Apache Spark · Databricks · Airflow · ETL/ELT · feature engineering · real-time inference · data validation
 
 **Serving & BI** FastAPI · Flask · REST APIs · Power BI · Tableau
 
 ---
 
-## Contact
+## How I work
 
-📧 venkatagopikondeti307@gmail.com
+**Measure what actually decides quality.** Retrieval is scored on its own — answer quality is bounded by it. Every forecast is measured against a baseline, because a forecast without one is a number without a meaning.
 
-Open to AI/ML engineering roles. Happy to walk through any of the projects above.
+**Fail loudly, not silently.** Quality gates exit non-zero on regression. Drift is detected from inputs alone, so problems surface weeks before labels arrive.
+
+**Build it so it can be tested.** Embeddings, vector stores and LLMs sit behind small interfaces with offline defaults — the logic that matters is verified in CI without a single external call, then swapped for real models in production.
+
+---
+
+📧 **venkatagopikondeti307@gmail.com** — happy to walk through any project above.
