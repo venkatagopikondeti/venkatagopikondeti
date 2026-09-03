@@ -37,8 +37,8 @@ Three production-shaped repositories. Every number below is reproducible by runn
 
 ### 🔍 [rag-doc-assistant](https://github.com/venkatagopikondeti/rag-doc-assistant)
 Retrieval-augmented question answering over your own documents — chunking, embeddings, vector index, and a FastAPI service.
-**Result: 100% hit@3, MRR 1.00** on a labelled evaluation set.
-`Python` `FastAPI` `LangChain` `FAISS` `Azure OpenAI` `Docker`
+**Result: 100% hit@3, MRR 1.00** on a six-question retrieval smoke test.
+`Python` `FastAPI` `FAISS` `sentence-transformers` `Azure OpenAI` `Docker`
 
 ### ⚙️ [mlops-churn-pipeline](https://github.com/venkatagopikondeti/mlops-churn-pipeline)
 End-to-end MLOps: train → quality gate → serve → monitor for drift. The build fails if model quality regresses.
@@ -47,10 +47,10 @@ End-to-end MLOps: train → quality gate → serve → monitor for drift. The bu
 
 ### 📈 [demand-forecasting](https://github.com/venkatagopikondeti/demand-forecasting)
 Daily demand forecasting with leakage-free features and rolling-origin backtesting.
-**Result: MASE 0.60** — 40% below the seasonal-naive baseline it's measured against.
-`XGBoost` `Prophet` `pandas` `time series` `backtesting`
+**Result: MASE 0.63** — 37% below the seasonal-naive scale it's measured against.
+`XGBoost` `scikit-learn` `pandas` `time series` `backtesting`
 
-> All three run their test suites on Python 3.10 / 3.11 / 3.12 in CI, with linting and evaluation gating every push. **58 tests, no network required.**
+> All three run their test suites on Python 3.10 / 3.11 / 3.12 in CI, with linting and evaluation gating every push. **64 tests, no network required.**
 
 ---
 
